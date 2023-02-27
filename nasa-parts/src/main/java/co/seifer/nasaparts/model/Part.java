@@ -1,6 +1,7 @@
 package co.seifer.nasaparts.model;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
@@ -16,7 +17,7 @@ public class Part implements Serializable {
     @JoinColumn(name = "provider_id")
     private Provider provider;
     @Column(name = "cuantity")
-    private Double cuantity; // si falla la culpa es de mat! y cambiar a double
+    private BigDecimal cuantity; // si falla la culpa es de mat! y cambiar a double
     private LocalDateTime last_date_updated;
 
     public Long getId() {
@@ -43,11 +44,11 @@ public class Part implements Serializable {
         this.provider = provider;
     }
 
-    public Double getCuantity() {
+    public BigDecimal  getCuantity() {
         return cuantity;
     }
 
-    public void setCuantity(Double cuantity) {
+    public void setCuantity(BigDecimal  cuantity) {
         this.cuantity = cuantity;
     }
 
@@ -59,7 +60,7 @@ public class Part implements Serializable {
         this.last_date_updated = last_date_updated;
     }
 
-    public Part(Long id, String name, Provider provider, Double cuantity, LocalDateTime last_date_updated) {
+    public Part(Long id, String name, Provider provider, BigDecimal  cuantity, LocalDateTime last_date_updated) {
         this.id = id;
         this.name = name;
         this.provider = provider;

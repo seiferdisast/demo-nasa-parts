@@ -34,6 +34,9 @@ public class Provider implements Serializable {
         this.name = name;
         this.enabled = enabled;
     }
+    public Provider() {
+
+    }
     @Override
     public String toString() {
         return "Provider [id=" + id + ", name=" + name + ", enabled=" + enabled + "]";
