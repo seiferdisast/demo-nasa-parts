@@ -67,6 +67,9 @@ public class Part implements Serializable {
         this.last_date_updated = last_date_updated;
     }
 
+    public Part(){
+    }
+
     @Override
     public String toString() {
         return "Part [id=" + id + ", name=" + name + ", provider=" + provider + ", cuantity=" + cuantity
