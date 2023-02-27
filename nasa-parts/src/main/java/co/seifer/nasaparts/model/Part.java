@@ -16,7 +16,7 @@ public class Part implements Serializable {
     @JoinColumn(name = "provider_id")
     private Provider provider;
     @Column(name = "cuantity")
-    private Number cuantity; // si falla la culpa es de mat! y cambiar a double
+    private Double cuantity; // si falla la culpa es de mat! y cambiar a double
     private LocalDateTime last_date_updated;
 
     public Long getId() {
@@ -43,11 +43,11 @@ public class Part implements Serializable {
         this.provider = provider;
     }
 
-    public Number getCuantity() {
+    public Double getCuantity() {
         return cuantity;
     }
 
-    public void setCuantity(Number cuantity) {
+    public void setCuantity(Double cuantity) {
         this.cuantity = cuantity;
     }
 
@@ -59,7 +59,7 @@ public class Part implements Serializable {
         this.last_date_updated = last_date_updated;
     }
 
-    public Part(Long id, String name, Provider provider, Number cuantity, LocalDateTime last_date_updated) {
+    public Part(Long id, String name, Provider provider, Double cuantity, LocalDateTime last_date_updated) {
         this.id = id;
         this.name = name;
         this.provider = provider;

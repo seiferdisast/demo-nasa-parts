@@ -1,8 +1,6 @@
 package co.seifer.nasaparts.model;
 
 import java.io.Serializable;
-import org.hibernate.annotations.Table;
-
 import jakarta.persistence.*;
 
 @Entity
